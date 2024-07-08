@@ -7,13 +7,11 @@ Welcome to DevToolKit! This repository serves as a comprehensive toolkit for dev
 
 Here are the resume templates, renowned for its popularity and ATS (Applicant Tracking System) compatibility, designed to help you craft a standout resume optimized for job applications in the tech industry.
 
-- [Jakes's Resume Template](https://www.overleaf.com/latex/templates/jakes-resume/syzfjbzwjncs)
+[Jakes's Resume Template](https://www.overleaf.com/latex/templates/jakes-resume/syzfjbzwjncs) &emsp; &emsp; &emsp; &emsp; &emsp; &emsp; &emsp; &emsp; | &emsp; &emsp; &emsp;  [Deedy CV Resume Template](https://www.overleaf.com/latex/templates/deedy-cv/bjryvfsjdyxz)
 
+<div align="left>
 <img src="https://github.com/Nitesh-thapliyal/DevToolkit/blob/main/assets/jakesResumeTemplate.png" height="400px" width="300px">
 
-
-- [Deedy CV Resume Template](https://www.overleaf.com/latex/templates/deedy-cv/bjryvfsjdyxz)
-
 <img src="https://github.com/Nitesh-thapliyal/DevToolkit/blob/main/assets/deedyCV.png" height="400px" width="300px">
-
+</div>
 
