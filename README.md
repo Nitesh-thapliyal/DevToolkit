@@ -14,4 +14,6 @@ Here are the resume templates, renowned for its popularity and ATS (Applicant Tr
 
 - [Deedy CV Resume Template](https://www.overleaf.com/latex/templates/deedy-cv/bjryvfsjdyxz)
 
+<img src="https://github.com/Nitesh-thapliyal/DevToolkit/blob/main/assets/deedyCV.png" height="400px" width="300px">
+
 
