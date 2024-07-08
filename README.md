@@ -11,7 +11,7 @@ Here are the resume templates, renowned for its popularity and ATS (Applicant Tr
 
 <div>
 <img src="https://github.com/Nitesh-thapliyal/DevToolkit/blob/main/assets/jakesResumeTemplate.png" height="400px" width="300px">
-&emsp;&emsp;
+&emsp;&emsp;&emsp;&emsp;
 <img src="https://github.com/Nitesh-thapliyal/DevToolkit/blob/main/assets/deedyCV.png" height="400px" width="300px">
 </div>
 
