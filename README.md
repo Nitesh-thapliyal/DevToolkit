@@ -9,7 +9,7 @@ Here are the resume templates, renowned for its popularity and ATS (Applicant Tr
 
 [Jakes's Resume Template](https://www.overleaf.com/latex/templates/jakes-resume/syzfjbzwjncs) &emsp; &emsp; &emsp; &emsp; &emsp; &emsp; &emsp; &emsp; | &emsp; &emsp; &emsp;  [Deedy CV Resume Template](https://www.overleaf.com/latex/templates/deedy-cv/bjryvfsjdyxz)
 
-<div align="left>
+<div>
 <img src="https://github.com/Nitesh-thapliyal/DevToolkit/blob/main/assets/jakesResumeTemplate.png" height="400px" width="300px">
 
 <img src="https://github.com/Nitesh-thapliyal/DevToolkit/blob/main/assets/deedyCV.png" height="400px" width="300px">
