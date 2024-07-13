@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>DevToolKit</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400..700&display=swap" rel="stylesheet">
+</head>
+<body>
+  <div class="container">
+    <nav class="sidebar">
+      <ul class="resource-list">
+        <li class="resource-item active" data-target="home">Home</li>
+        <li class="resource-item" data-target="resume-templates">Resume Templates</li>
+        <li class="resource-item" data-target="books">Books</li>
+      </ul>
+    </nav>
+    <main class="content">
+      <div class="resource-details" id="home">
+        <h2>Welcome to DevToolKit!</h2>
+        <p>DevToolKit is your one-stop shop for developer resources. It provide a curated collection of essential links, documentation, and tools to empower your coding journey. Whether you're a seasoned developer or just starting out, DevToolKit has something for you.</p>
+      </div>
+      <div class="resource-details" id="resume-templates">
+        <h2>Resume Templates</h2>
+        <p>Find a variety of resume templates to help you craft a standout application.</p>
+        <ul>
+          <li><a href="https://www.overleaf.com/latex/templates/jakes-resume/syzfjbzwjncs">Jakes's Resume Template</a></li>
+          <li><a href="https://www.overleaf.com/latex/templates/deedy-cv/bjryvfsjdyxz">Deedy CV Resume Template</a></li>
+          </ul>
+      </div>
+      <div class="resource-details" id="books">
+        <h2>Books</h2>
+        <p>Explore a curated list of books to enhance your developer skills.</p>
+        <ul>
+          <li>Clean Code by Robert C. Martin</li>
+          <li>The Pragmatic Programmer by Andrew Hunt and David Thomas</li>
+          </ul>
+      </div>
+    </main>
+  </div>
+  <script src="script.js"></script>
+</body>
+</html>
