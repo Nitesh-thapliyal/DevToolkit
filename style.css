@@ -1,8 +1,17 @@
+@import url('https://fonts.googleapis.com/css2?family=VT323&display=swap');
+
+:root {
+  --bg-dark: #0a0e17;
+  --bg-light: #1a1f2e;
+  --text-primary: #33ff33;
+  --text-secondary: #ffffff;
+  --accent: #00ffff;
+}
+
 body {
-  font-family: sans-serif;
-  margin: 0;
-  padding: 0;
-  background-color:wheat ;
+  background-color: var(--bg-dark);
+  color: var(--text-secondary);
+  font-family: 'Source Code Pro', monospace;
 }
 
 .container {
@@ -12,29 +21,53 @@ body {
 
 .sidebar {
   width: 20%;
-  background-image: linear-gradient(#910A67, #720455); 
-  color: white;
+  background-color: var(--bg-dark);
+  color: var(--text-secondary);
   padding: 20px;
-  margin-top: 69px;
+  margin-top: 70px;
+  border-right: 1px solid var(--text-primary);
 }
 
 .resource-list {
-  list-style: none;
+  list-style-type: none;
   padding: 0;
-  margin: 0;
 }
 
 .resource-item {
-  margin-bottom: 10px;
+  color: var(--text-secondary);
+  padding: 10px 15px;
+  margin: 5px 0;
   cursor: pointer;
+  transition: background-color 0.3s ease, color 0.3s ease, transform 0.3s ease;
+  border-left: 3px solid transparent;
+  display: flex;
+  align-items: center;
+}
+
+.resource-item i {
+  margin-right: 10px;
+  color: var(--text-primary);
+}
+
+.resource-item:hover, .resource-item.active {
+  background-color: rgba(51, 255, 51, 0.1);
+  color: var(--text-primary);
+  transform: translateX(5px);
+  border-left: 3px solid var(--text-primary);
 }
 
 .resource-item.active {
-  font-weight: bold;
+  box-shadow: 0 0 10px rgba(51, 255, 51, 0.3);
+}
+
+@keyframes pulse-sidebar {
+  0% { text-shadow: 0 0 5px rgba(51, 255, 51, 0.5); }
+  50% { text-shadow: 0 0 10px rgba(51, 255, 51, 0.7), 0 0 20px rgba(51, 255, 51, 0.5); }
+  100% { text-shadow: 0 0 5px rgba(51, 255, 51, 0.5); }
 }
 
 .resource-item:hover {
-  opacity: 0.8;
+  animation: pulse-sidebar 2s infinite;
 }
 
 .content {
@@ -73,8 +106,9 @@ body {
   font-size: 38px !important;
 }
 
-.fixed-nav-bar{
-  background-image: linear-gradient(to right, #49243E, #BB8493);
+.fixed-nav-bar {
+  background-color: var(--bg-dark);
+  border-bottom: 1px solid var(--text-primary);
   position: fixed;
   width: 100%;
   display: flex;
@@ -82,19 +116,11 @@ body {
   align-items: center;
   padding: 10px 20px;
   box-sizing: border-box;
-  height: 70px; /* Set a fixed height */
+  height: 70px;
+  z-index: 1000;
 }
 
-.nav-header h2{
-  font-family: "Playwrite HR", cursive;
-  font-optical-sizing: auto;
-  font-weight: 200;
-  font-style: normal;
-  color:white;
-  margin: 0; /* Remove default margin */
-}
-
-.nav-header{
+.nav-header {
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -102,10 +128,26 @@ body {
   height: 100%;
 }
 
+h2, .resource-details h2 {
+  font-family: 'VT323', monospace;
+  font-size: 2.2em;
+  color: var(--text-primary);
+  text-shadow: 0 0 5px var(--text-primary), 0 0 10px var(--text-primary);
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  margin-bottom: 20px;
+  font-weight: 400;
+}
+
+.nav-header h2,
+.resource-details h2 {
+  font-size: 2em;
+}
+
 .social-icons {
   display: flex;
   align-items: center;
-  gap: 15px; /* Space between icons */
+  gap: 15px;
 }
 
 .social-icon {
@@ -113,14 +155,15 @@ body {
   height: 24px;
   cursor: pointer;
   object-fit: contain;
-  transition: opacity 0.3s ease;
+  transition: filter 0.3s ease, transform 0.3s ease;
+  filter: brightness(0) saturate(100%) invert(80%) sepia(72%) saturate(464%) hue-rotate(86deg) brightness(119%) contrast(119%);
 }
 
 .social-icon:hover {
-  opacity: 0.8;
+  filter: brightness(0) saturate(100%) invert(96%) sepia(53%) saturate(454%) hue-rotate(86deg) brightness(124%) contrast(119%);
+  transform: scale(1.1);
 }
 
-/* You can add specific styles for each icon if needed */
 .github-icon {
   /* GitHub-specific styles */
 }
@@ -141,4 +184,132 @@ body {
   width: 24px; /* Make the icon smaller */
   height: 24px;
   cursor: pointer;
+}
+.feature-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px;
+  margin-top: 30px;
+}
+
+.feature {
+  background-color: var(--bg-light);
+  border: 1px solid var(--text-primary);
+  padding: 20px;
+  text-align: center;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.feature:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 5px 15px rgba(51, 255, 51, 0.3);
+}
+
+.feature h3 {
+  color: var(--text-primary);
+  margin-bottom: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.feature h3 i {
+  margin-right: 10px;
+}
+
+.feature p {
+  color: var(--text-secondary);
+}
+
+/* Add a glow effect to the feature boxes */
+@keyframes pulse {
+  0% { box-shadow: 0 0 0 0 rgba(51, 255, 51, 0.4); }
+  70% { box-shadow: 0 0 0 10px rgba(51, 255, 51, 0); }
+  100% { box-shadow: 0 0 0 0 rgba(51, 255, 51, 0); }
+}
+
+.feature {
+  animation: pulse 2s infinite;
+}
+
+.tech-bracket {
+  color: var(--accent);
+  font-weight: bold;
+}
+
+.resume-list {
+  list-style-type: none;
+  padding: 0;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: space-between;
+}
+
+.resume-item {
+  flex-basis: calc(50% - 10px);
+  max-width: calc(50% - 10px);
+  margin-bottom: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.resume-item a {
+  display: block;
+  color: var(--text-primary);
+  text-decoration: none;
+  margin-bottom: 10px;
+  font-weight: bold;
+  text-align: center;
+}
+
+.resume-item a:hover {
+  text-decoration: underline;
+}
+
+.resume-preview-wrapper {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.resume-preview {
+  max-width: 100%;
+  height: auto;
+  border: 1px solid var(--text-primary);
+  box-shadow: 0 0 10px rgba(51, 255, 51, 0.3);
+  transition: transform 0.3s ease;
+  object-fit: contain;
+  max-height: 500px; /* Adjust this value as needed */
+}
+
+.resume-preview:hover {
+  transform: scale(1.05);
+}
+
+/* Responsive design for smaller screens */
+@media (max-width: 768px) {
+  .resume-item {
+    flex-basis: 100%;
+    max-width: 100%;
+  }
+}
+
+/* Remove the pseudo-elements we added earlier */
+h2::before, h2::after {
+  content: none;
+}
+
+/* Specifically target the home section h2 */
+#home h2 {
+  font-family: 'VT323', monospace;
+  font-size: 2.2em;
+  color: var(--text-primary);
+  text-shadow: 0 0 5px var(--text-primary), 0 0 10px var(--text-primary);
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  margin-bottom: 20px;
+  font-weight: 400;
 }
