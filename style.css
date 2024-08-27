@@ -289,6 +289,79 @@ h2, .resource-details h2 {
   transform: scale(1.05);
 }
 
+/* Responsive styles */
+@media screen and (max-width: 768px) {
+  .fixed-nav-bar {
+    padding: 5px 10px;
+    height: auto;
+  }
+
+  .nav-header h2 {
+    font-size: 1.5em;
+  }
+
+  .social-icons {
+    gap: 10px;
+  }
+
+  .social-icon {
+    width: 20px;
+    height: 20px;
+  }
+
+  .container {
+    flex-direction: column;
+  }
+
+  .sidebar {
+    width: 100%;
+    margin-top: 60px;
+    padding: 10px;
+  }
+
+  .content {
+    width: 100%;
+    padding: 10px;
+  }
+
+  .resource-details h2 {
+    font-size: 1.8em;
+  }
+
+  .feature-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .resume-list {
+    flex-direction: column;
+  }
+
+  .resume-item {
+    flex-basis: 100%;
+    max-width: 100%;
+  }
+
+  .resume-preview {
+    max-height: 300px;
+  }
+}
+
+/* Additional responsive adjustments for very small screens */
+@media screen and (max-width: 480px) {
+  .nav-header h2 {
+    font-size: 1.2em;
+  }
+
+  .social-icon {
+    width: 18px;
+    height: 18px;
+  }
+
+  .resource-details h2 {
+    font-size: 1.5em;
+  }
+}
+
 /* Responsive design for smaller screens */
 @media (max-width: 768px) {
   .resume-item {
